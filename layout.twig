@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ page.seoLang }}">
+
+	<head>
+	
+		{% include 'includes/head.twig' %}
+
+		{% include basekit.headScript %}
+
+	</head>
+
+	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+
+		<div class="wrapper">
+
+			{% include 'includes/header.twig' %}
+				
+			{% block content %}
+			{% endblock %}
+			
+		</div>
+
+		{% include 'includes/footer.twig' %}
+
+		<script type="text/javascript">
+			!function() {
+				function supportsSVG() {
+					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
+				}
+				if (supportsSVG()) document.documentElement.className += ' svg'
+			}()
+		</script>
+
+		<!-- Fullscreen Overlay Nav !-->
+		<script src="{{asset('js/modernizr.custom.js')}}"></script>
+		<script src="{{asset('js/classie.js')}}"></script>
+		<script src="{{asset('js/fullscreen-nav.js')}}"></script>
+			
+		{% include basekit.bodyScript %}	
+	</body>
+</html>

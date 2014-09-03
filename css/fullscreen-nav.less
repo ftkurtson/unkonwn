@@ -1,0 +1,180 @@
+// -----------------------------
+// Navigation
+// -----------------------------
+
+// On edit
+body.edit .widget.extendednavigation {
+	border: 2px dashed lighten(@color-swatch2,15%);
+}
+
+// Main Nav
+.widget.extendednavigation {
+	width: 40%;
+	margin: 5em auto;
+	padding: 3em 0;
+	@media (max-width: 960px) {
+		width: 60%;
+	}
+	@media @mobile {
+		width: 90%;
+		margin: 3.5em auto;
+		padding: 1em 0;
+	}
+	.extendednavigation {
+		width: 100%;
+		a.pull {
+			@media @tablet {
+				display: none;
+			}
+		}
+	}
+	// Tablet Overrides
+	ul {
+		@media @tablet {
+			display: block;
+			padding-top: 0;
+			li {
+				padding: 0;
+			}
+		}
+	}
+	ul li {
+		width: 100%;
+		margin-bottom: 10px;
+		@media @mobile {
+			margin-bottom: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@media @tablet {
+			border-bottom: 0;
+		}
+		.text, &.folder .text, a {
+			@media @tablet {
+				font-size: bkscale(@font-swatch6-font-size,0.9);
+				line-height: bkscale(@font-swatch6-line-height,0.9);
+			}
+			@media @mobile {
+				font-size: bkscale(@font-swatch6-font-size,0.8);
+				line-height: bkscale(@font-swatch6-line-height,0.8);
+			}
+		}
+		&.folder {
+			margin-right: 0;
+			&:after {
+				display: none;
+			}
+			.text {
+				display: inline-block;
+				&:after {
+					display: block;
+					content: "\21AF";
+					position: absolute;
+					right: -10px;
+					top: -1px;
+				}
+			}
+		}
+		// Dropdown Menu
+		&:hover {
+			-webkit-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			ul {
+				width: 100%;
+				margin-top: 0;
+				padding: 20px 0;
+				background-color: @color-swatch2;
+				border: 1px solid hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.4); 
+				li {
+					margin-bottom: 0;
+					.text:after {
+						display: none;
+						content: "";
+					}
+				}
+			}
+		}
+	}
+}
+
+// Overlay Style
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 0.95); 
+}
+
+// Over Crosss
+.overlay .overlay-close {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	border: 1px solid hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.4); 
+	border-right: 0;
+	border-top: 0;
+	background-image: image('/images/cross.png');
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 9999;
+	cursor: pointer;
+	&:hover {
+		border-color: @color-swatch1;
+	}
+	@media @tablet {
+		width: 50px;
+		height: 50px;
+		background-size: 18px;
+	}
+}
+
+// Effects
+.overlay-hugeinc {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: opacity 0.5s;
+		transition: opacity 0.5s;
+		z-index: 9999;
+		// Styles
+		display: -webkit-flexbox;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+		@media (max-width: 960px) {
+			display: block;
+		}
+	}
+}
+
+// Remove Windows Scrollbars
+.overlay-hugeinc.open {
+	-ms-overflow-style: none;
+}
+
+.overlay-hugeinc.open::-webkit-scrollbar {
+	width: 0px!important;
+	height: 0px!important;
+}
+

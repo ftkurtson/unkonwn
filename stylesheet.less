@@ -1,0 +1,418 @@
+@import "@{templateCommon}/basekit-bootstrap.less";
+@import "@{templateLocal}/css/fullscreen-nav.less";
+@import "@{templateLocal}/css/ecommerce.less";
+@import "@{templateLocal}/css/widgets.less";
+
+// -----------------------------
+// Page Settings
+// -----------------------------
+
+a {
+	color: @color-swatch2;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// Mixins
+.border-radius(@radius) {
+	-webkit-border-radius:	@radius;
+	-moz-border-radius:	@radius;
+	border-radius:		@radius;
+}
+.box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;        
+}
+
+// Wrapper 
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+    	width: 960px;
+    	margin: 0 auto;
+    }
+}
+
+ul, li {
+	margin: 0;
+}
+
+// Body
+body {
+	background-image: image('/images/train-station.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-color: @color-swatch7;
+	&.edit {
+		-webkit-transition: inherit;
+		transition: inherit;
+	}
+}
+
+// Page Content
+.page-content {
+	position: relative;
+}
+
+// Canvas
+.canvas {
+	padding: 50px;
+	background-color: @color-swatch1;
+	border: 1px solid darken(@color-swatch1,10%);
+	.box-sizing;
+	@media @tablet {
+		padding: 20px;
+	}
+}
+
+.widget.extendednavigation .bk-overlay {
+	width: 100%!important;
+}
+
+// -----------------------------
+// Page Typography
+// -----------------------------
+
+p, li {
+	font-size: bkscale(@font-swatch5-font-size,0.9);
+	line-height: bkscale(@font-swatch5-line-height,0.9);
+}
+
+// -----------------------------
+// Header
+// -----------------------------
+
+body {
+	&.swatch-3,
+	&.swatch-4 {
+		button.btn-nav:hover {
+			background-color: @color-swatch3;
+			border-color: @color-swatch3;
+		}
+	}
+}
+
+.template-header {	
+	position: relative;
+	padding: 5.5em 4em 5.5em 0;
+	@media @tablet {
+		padding: 3.5em 4em 3.5em 0;
+	}
+	@media @mobile {
+		padding: 2.5em 0 1.5em 0;
+	}
+	h1, h2, h3, h4, p {
+		color: @color-swatch1;
+	}
+	h3 {
+		@media @mobile {
+			font-size: bkscale(@font-swatch3-font-size,0.9);
+			line-height: bkscale(@font-swatch3-line-height,1);
+		}
+	}
+	// Company Name
+	.widget.companyname {
+		@media @mobile {
+			width: 80%;
+			a {
+				font-size: bkscale(@font-swatch10-font-size,0.8);
+				line-height: bkscale(@font-swatch10-line-height,0.5);
+			}
+		}
+	}
+	// Button
+	button.btn-nav {
+		position: absolute;
+		right: 0;
+		width: 41px;
+		height: 35px;
+		background: transparent;
+		border: 1px solid hsla(hue(@color-swatch3), saturation(@color-swatch3), lightness(lighten(@color-swatch3,10%)), 0.7); 
+		text-indent: -900em;
+		overflow: hidden;
+		cursor: pointer;
+		outline: none;
+		padding: 0;
+		&:hover {
+			background-color: darken(@color-swatch3,25%);
+			border: 1px solid darken(@color-swatch3,25%);
+			-webkit-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		&:active {
+			-webkit-transform: translate(0, 3px);
+			-ms-transform: translate(0, 3px);
+			transform: translate(0, 3px);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 7px;
+			right: 0;
+			left: 0;
+			margin: auto;
+			width: 26px;
+			height: 3px;
+			background: @color-swatch1;
+			box-shadow: 0 8px 0 @color-swatch1, 0 16px 0 @color-swatch1;
+		}
+	}
+}
+
+// Company Info
+.company-info {
+	float: left;
+	width: 100%;
+}
+
+// -----------------------------
+// Profile Header
+// -----------------------------
+
+// Override
+.profile-header .widget.profile form input {
+	border: 0;
+}
+
+.profile-header,
+footer.template-footer {
+	text-align: right;
+	.profile, p {
+		display: inline-block;
+		padding-bottom: 0;
+		@media @mobile {
+			margin-right: 0;
+			line-height: normal;
+		}
+	}
+	p {
+		@media @mobile {
+			margin-right: 0;
+			line-height: normal;
+		}
+	}
+	.profile {
+		vertical-align: top;
+		margin-left: 10px;
+		padding: 0 10px;
+		background-color: hsla(hue(@color-swatch4), saturation(@color-swatch4), lightness(lighten(@color-swatch4,10%)), 0.5); 
+		border: 1px solid darken(@color-swatch1,65%);
+		border-bottom: 0;
+		@media @mobile {
+			padding: 7px 10px;
+		}
+	}
+	p, span, .bk-profile-email a, .widget.profile form input {
+		color: @color-swatch1;
+		font-size: 14px;
+		font-family: @font-swatch4-font-family;	
+	}
+	.bk-profile-email {
+		line-height: 36px;
+		@media @mobile {
+			line-height: inherit;
+		}
+	}
+	.bk-profile-email a:hover {
+		opacity: 0.7;
+		text-decoration: none;
+	}
+	// Social Icons
+	.widget.profile .bk-profile-socialicons {
+		display: inline-block;
+		vertical-align: bottom;
+		margin: 0;
+		line-height: 16px;
+		span a {
+			margin: 0 -6px 0 0;
+			background-color: transparent;
+			text-indent: 9999px;
+			overflow: hidden;
+			@media @mobile {
+				height: 18px;
+			}
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+	// Address
+	.bk-profile-address {
+		p:after {
+			content: "\002C";
+		}
+		p:last-child:after {
+			content: '';
+		}
+	}
+	// Twitter
+	.twitter li {
+		border: 0;
+		padding: 0;
+		p {
+			line-height: 22px;
+			padding: 10px 0;
+		}
+	}	
+	// Form
+	.widget.profile form {
+		margin: 0;
+		input[type=text], 
+		input[type=email], 
+		textarea {
+			height: inherit;
+			margin: 0;
+			padding: 0;
+			text-indent: 0;
+			line-height: 20px;
+			@media @mobile {
+				width: inherit;
+			}
+		}
+		input,
+		button {
+			background-color: transparent;
+		}
+		button {
+			padding: 0;
+			color: @color-swatch1;
+			box-shadow: none;
+			border: none;
+			text-transform: inherit;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
+
+// -----------------------------
+// Feature
+// -----------------------------
+
+.widget.feature {
+	display: block;
+	margin-bottom: 50px;
+	.feature-bgimg,
+	.feature-bgimg .content {
+		display: -webkit-flexbox;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	    height: auto;
+	    min-height: 178px;
+	}
+	.feature-bgimg {
+		display: block;
+		padding: 20px;
+		.content {
+			text-align: center;
+			button {
+				padding: 6px 14px 8px;
+				background-color: transparent;
+				border: 1px solid @color-swatch3;
+				color: @color-swatch1;
+				box-shadow: none;
+			}
+		}
+	}
+	h2 {
+		@media @mobile {
+			line-height: bkscale(@font-swatch8-line-height,0.9);
+		}
+	}
+}
+
+// -----------------------------
+// Bottom Profile
+// -----------------------------
+
+.bottom-profile {
+	margin: 30px 0;
+	text-align: center;
+	// Form
+	.widget.profile form {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		fieldset input {
+			width: 35%;
+			height: 44px;
+			background-color: @color-swatch1;
+			@media @mobile {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+footer.template-footer {
+	display: block;
+	margin: 0;
+	padding: 10px 0;
+	background-color: @color-swatch4;
+	text-align: center;
+	h1, h2, h3, h4, p {
+		color: @color-swatch1;
+	}
+	.profile {
+		border: 0;
+		text-transform: uppercase;
+		text-align: center;
+		background-color: transparent;
+		font-family: @font-swatch4-font-family;
+		font-size: bkscale(@font-swatch4-font-size,0.8);
+		font-weight: @font-swatch4-font-weight;
+		line-height: @font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
+		span {
+			font-size: 12px;
+			color: darken(@color-swatch1,30%);
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+	}
+	// Form
+	.widget.profile form {
+		input {
+			width: auto;
+			min-width: 220px;
+			margin-right: 10px!important;
+			padding-bottom: 8px!important;
+			border: 0;
+			border-bottom: 1px solid darken(@color-swatch1,65%);
+		}
+		button {
+			padding: 0 6px;
+			border: 1px solid darken(@color-swatch1,70%);
+			&:hover {
+				opacity: 1;
+				color: @color-swatch1;
+				background-color: @color-swatch2;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

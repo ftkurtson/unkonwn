@@ -1,0 +1,13 @@
+<!-- Header Include !-->
+<header class="template-header clearfix">
+	<div class="company-info">
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		{{widget('content', 'companycontent', {"content":'<h3>Reliving memories.</h3>'})|raw}}
+	</div>
+	<button id="trigger-overlay" type="button" class="btn-nav">Open Overlay</button>
+	<div class="overlay overlay-hugeinc">
+		<button type="button" class="overlay-close">Close</button>
+		{{widget('extendednavigation', 'thisunqiuewidgetname', {"align":"center"})|raw}}
+	</div>
+</header>
+

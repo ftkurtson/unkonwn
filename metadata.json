@@ -1,0 +1,139 @@
+{
+	"name":"Unknown",
+	"thumbnail":"unknown.png",
+	"screenshot":"unknown.png",
+    "templateType":"standard",
+    "tags": { "en": ["business", "busy", "light", "social", "contrast", "space"] },
+    "pageTypes":["home"],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#01b4f0",
+            "color3":"#ffe777",
+            "color4":"#000000",
+            "color5":"#888888",
+            "color6":"#ffffff",
+            "color7":"#fafafa"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#90dc75",
+            "color3":"#ffb477",
+            "color4":"#494141",
+            "color5":"#8b8b8b",
+            "color6":"#ffffff",
+            "color7":"#fafafa"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#dc7575",
+            "color3":"#9095ff",
+            "color4":"#454149",
+            "color5":"#8a8282",
+            "color6":"#ffffff",
+            "color7":"#fafafa"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#67cead",
+            "color3":"#f9a0e7",
+            "color4":"#484149",
+            "color5":"#878986",
+            "color6":"#ffffff",
+            "color7":"#fafafa"
+        }
+    },
+    "images":[
+        "images/feature-bg.jpg",
+        "images/train-station.jpg"
+    ],
+    "fontSwatch": {
+       "title": "Merriweather / Source Sans Pro / Cabin",
+        "font1": {
+            "font-family": "\"Bree Serif\", \"Lato\", Helvetica",
+            "font-size": "25px",
+            "font-weight": "300",
+            "line-height": "inherit",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Cabin\", \"Oswald\", Arial, sans-serif",
+            "font-size": "25px",
+            "font-weight": "700",
+            "line-height": "32px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Source Sans Pro\", \"Lato\", Arial, sans-serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "24px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Source Sans Pro\", \"Lato\", Arial, sans-serif",
+            "font-size": "19px",
+            "font-weight": "inherit",
+            "line-height": "32px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-size": "17px",
+            "font-weight": "inherit",
+            "line-height": "36px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-size": "26px",
+            "font-weight": "300",
+            "line-height": "46px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch3",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "@color-swatch2"
+         },
+        "font7": {
+            "font-family": "\"Cabin\", \"Oswald\", Arial, sans-serif",
+            "font-size": "14px",
+            "font-weight": "inherit",
+            "line-height": "24px",
+            "color": "@color-swatch4",
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font8": {
+            "font-family": "\"Bree Serif\", \"Lato\", Helvetica",
+            "font-size": "34px",
+            "font-weight": "inherit",
+            "line-height": "36px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Source Sans Pro\", \"Lato\", Arial, sans-serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Bree Serif\", \"Merriweather\", sans-serif",
+            "font-size": "40px",
+            "font-weight": "inherit",
+            "line-height": "36px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        }
+    }
+}
